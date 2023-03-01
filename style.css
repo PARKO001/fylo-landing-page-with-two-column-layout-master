@@ -82,8 +82,12 @@ main{
     font-size: small;
     box-shadow: none;
     border-radius: 2px;
+    border: 1px solid;
 }
-.f_left_whole_button input:focus{
+input:invalid{
+    border: 1px solid red;
+}
+input:focus{
     outline: none;
     border: 2px solid black;
     background-color: rgb(240, 240, 240);
@@ -101,7 +105,7 @@ main{
     border: 2px solid rgb(109, 109, 109);
     border-radius: 2px;
 }
-.f_left_whole_button .btn:hover{
+.btn:hover{
     background-color: rgb(62, 62, 255);
     font-weight: 700;
     cursor: pointer;
@@ -154,6 +158,12 @@ main{
     color: var(--Moderate-Cyan);
     font-size: 15px;
 }
+.s_left a:hover{
+    color: rgb(0, 219, 219);
+}
+/* .s_left span:hover{
+    color: aqua;
+} */
 .s_left .quotebox{
     height: 14rem;
     width: 23rem;
@@ -238,8 +248,8 @@ footer{
     display: flex;
     justify-content: space-between;
 }
-footer .left img{
-    /* color: white; */
+footer .left #fyloimg{
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(320deg) brightness(103%) contrast(101%);
 }
 footer .phone{
     display: flex;
@@ -282,5 +292,10 @@ footer .center{
 }
 .pnglogo{
     height: 1rem;
-    color: var(--Light-Grayish-Blue);
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(320deg) brightness(103%) contrast(101%);
+    /* border: 1px solid rgb(237, 219, 219); */
+    border-radius: 50%;
+}
+.pnglogo:hover{
+    filter: invert(21%) sepia(62%) saturate(2660%) hue-rotate(212deg) brightness(92%) contrast(94%);
 }
